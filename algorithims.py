@@ -22,20 +22,21 @@ def change_finder(testedList, interactive=False):
 
     return changes
 
-
-def change_to_int(List):
-
-    processed_list = []
-
-    for item in List:
-        if '-' in item:
-            int_change = item.replace('-', '')
-            processed_list.append(int(int_change))
-        elif '+' in item:
-            int_change = item.replace('+', '')
-            processed_list.append(int(int_change))
-
-    return processed_list
+#  This might be useful in the future?
+#
+# def change_to_int(List):
+#
+#    processed_list = []
+#
+#    for item in List:
+#        if '-' in item:
+#            int_change = item.replace('-', '')
+#            processed_list.append(int(int_change))
+#        elif '+' in item:
+#            int_change = item.replace('+', '')
+#            processed_list.append(int(int_change))
+#
+#    return processed_list
 
 
 def dict_to_graph(dictionary, title, x_title=None, y_title=None):
