@@ -38,39 +38,6 @@ def change_to_int(List):
     return processed_list
 
 
-def outliers(List, interactive=False):
-
-    outlier_list_loc = []
-    returned_outliers = []
-
-    int_list = change_to_int(List)
-    list_average = average(int_list)
-    sd = standard_deviation(List)
-
-    for item in int_list:
-        if item > list_average*sd or item < list_average*sd*-1:
-            outlier_list_loc.append(int_list.index(item))
-            pass
-        else:
-            pass
-
-    if interactive:
-        print('\n** RESULTS **')
-    for item in outlier_list_loc:
-        loc = item+1
-        if interactive:
-            try:
-                print('** OUTLIER FOUND: ' + str(List[loc]))
-            except IndexError:
-                pass
-        try:
-            returned_outliers.append(str(List[loc]))
-        except IndexError:
-            pass
-
-    return returned_outliers
-
-
 def dict_to_graph(dictionary, title, x_title=None, y_title=None):
 
     # METHOD IMPORT
