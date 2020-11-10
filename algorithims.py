@@ -130,21 +130,6 @@ def datetime_fmt(pro_list):
     return list_of_processed_years
 
 
-def yearly_sev(pro_list_date, pro_list_mag):
-
-    dates = datetime_fmt(pro_list_date)
-    mags = pro_list_mag
-    yearly_severity = {}
-
-    for date, mag in zip(dates, mags):
-        if date in yearly_severity.keys():
-            yearly_severity[date].append(float(mag))
-        elif date not in yearly_severity.keys():
-            yearly_severity[date] = [float(mag)]
-
-    return yearly_severity
-
-
 def list_half(pro_list):
     x = len(pro_list)
     y = x/2
