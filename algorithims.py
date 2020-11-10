@@ -1,18 +1,4 @@
 
-def standard_deviation(List):
-
-    from math import sqrt
-    u = average(List)
-    top = 0
-
-    for x in List:
-        top = abs(x - u)**2
-    bottom = top/len(List)
-    answer = round(sqrt(bottom), 3)
-
-    return answer
-
-
 def change_finder(testedList, interactive=False):
 
     changes = []
