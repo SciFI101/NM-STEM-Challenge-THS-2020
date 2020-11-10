@@ -130,24 +130,6 @@ def datetime_fmt(pro_list):
     return list_of_processed_years
 
 
-def yearly_amt(pro_list):
-
-    from collections import Counter
-
-    earth_year, earth_frq = [], []
-    yearly_amount = {}
-
-    counted = Counter(datetime_fmt(pro_list))
-    for key, value in counted.items():
-        earth_frq.append(value)
-        earth_year.append(key)
-
-    for item1, item2 in zip(earth_year, earth_frq):
-        yearly_amount[item1] = [float(item2)]
-
-    return yearly_amount
-
-
 def yearly_sev(pro_list_date, pro_list_mag):
 
     dates = datetime_fmt(pro_list_date)
