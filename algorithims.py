@@ -1,13 +1,4 @@
 
-def average(List):
-    base = 0
-    for item in List:
-        base += item
-    values = len(List)
-    avg = base/values
-    return avg
-
-
 def standard_deviation(List):
 
     from math import sqrt
