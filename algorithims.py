@@ -40,19 +40,30 @@ def change_finder(testedList, interactive=False):
 
 
 def dict_to_graph(dictionary, title, x_title=None, y_title=None):
+    """
+    Makes a graph with x and y values.
+
+    DICTONARY STRUCTURE:
+
+    {title_y: [value_y], title_x: [value_x]}
+    """
 
     # METHOD IMPORT
     import matplotlib.pyplot as mpl
 
     x_value, y_value = [], []
+    graph_type_simple = False
 
+    # Check if titles are being used, if so graph_type is simple.
     if x_title is not None and y_title is not None:
         x_graph_title = x_title
         y_graph_title = y_title
 
-        for year, data in dictionary.items():
-            x_value.append(year)
-            y_value.append(data)
+        for x, y in dictionary.items():
+            x_value.append(x)
+            y_value.append(y)
+
+        graph_type_simple = True
 
     else:
 
